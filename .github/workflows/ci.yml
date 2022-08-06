@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DJANGO_SETTINGS_MODULEL: netflix.settings
-      DEBUG: ${{ env.secrets.DEBUG }}
-      SECRET_KEY: ${{ env.secrets.SECRET_KEY }}
-      POSTGRES_ENGINE: ${{ env.secrets.POSTGRES_ENGINE }}
-      POSTGRES_DB: ${{ env.secrets.POSTGRES_DB }}
-      POSTGRES_USER: ${{ env.secrets.POSTGRES_USER }}
-      POSTGRES_PASSWORD: ${{ env.secrets.POSTGRES_PASSWORD }}
-      POSTGRES_HOST: ${{ env.secrets.POSTGRES_HOST }}
-      POSTGRES_PORT: ${{ env.secrets.POSTGRES_PORT }}
+      DEBUG: ${{ env.DEBUG }}
+      SECRET_KEY: ${{ env.SECRET_KEY }}
+      POSTGRES_ENGINE: ${{ env.POSTGRES_ENGINE }}
+      POSTGRES_DB: ${{ env.POSTGRES_DB }}
+      POSTGRES_USER: ${{ env.POSTGRES_USER }}
+      POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+      POSTGRES_HOST: ${{ env.POSTGRES_HOST }}
+      POSTGRES_PORT: ${{ env.POSTGRES_PORT }}
 
     steps:
       - uses: actions/checkout@v2
