@@ -8,23 +8,27 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DJANGO_SETTINGS_MODULEL: netflix.settings
-      DEBUG: ${{ env.DEBUG }}
-      SECRET_KEY: ${{ env.SECRET_KEY }}
-      POSTGRES_ENGINE: ${{ env.POSTGRES_ENGINE }}
-      POSTGRES_DB: ${{ env.POSTGRES_DB }}
-      POSTGRES_USER: ${{ env.POSTGRES_USER }}
-      POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
-      POSTGRES_HOST: ${{ env.POSTGRES_HOST }}
-      POSTGRES_PORT: ${{ env.POSTGRES_PORT }}
 
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: 3.7
       - name: Install Requirements
         run: pip3 install -r requirements.txt
       - name: Run Tests
+        env:
+          DEBUG: ${{ env.DEBUG }}
+          SECRET_KEY: ${{ env.SECRET_KEY }}
+          TELEBOT_URL: ${{ env.TELEBOT_URL }}
+          TELEBOT_TOKEN: ${{ env.TELEBOT_TOKEN }}
+          TELEBOT_CHAT_ID: ${{ env.TELEBOT_CHAT_ID }}
+          POSTGRES_ENGINE: ${{ env.POSTGRES_ENGINE }}
+          POSTGRES_DB: ${{ env.POSTGRES_DB }}
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          POSTGRES_HOST: ${{ env.POSTGRES_HOST }}
+          POSTGRES_PORT: ${{ env.POSTGRES_PORT }}
         run: python3 manage.py test
 
 
