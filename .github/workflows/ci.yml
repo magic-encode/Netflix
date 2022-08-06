@@ -8,14 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DJANGO_SETTINGS_MODULEL: netflix.settings
-      DEBUG: ${{ secrets.DEBUG }}
-      SECRET_KEY: ${{ secrets.SECRET_KEY }}
-      POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
-      POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-      POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
-      POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
-
+      POSTGRES_DB: railway
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: As55XdjdamTh7JstslO8
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
