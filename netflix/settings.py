@@ -1,6 +1,9 @@
 from pathlib import Path
+
 from environs import Env
+
 import os
+
 env = Env()
 env.read_env()
 
@@ -8,7 +11,8 @@ env.read_env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = env.str("SECRET_KEY")
+# SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = 'django-insecure-x@@@e&%ajjp0)wic+8!9po!()9u*=@(zn%v=nxd!-8e^_4e%1o'
 
 
 DEBUG = True
@@ -65,12 +69,12 @@ WSGI_APPLICATION = 'netflix.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': env.str('POSTGRES_ENGINE'),
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': env.str('POSTGRES_DB'),
         'USER': env.str('POSTGRES_USER'),
         'PASSWORD': env.str('POSTGRES_PASSWORD'),
-        'HOST': env.str('POSTGRES_HOST'),
-        'PORT': env.int('POSTGRES_PORT'),
+        'HOST': 'containers-us-west-71.railway.app',
+        'PORT': 6223,
     }
 }
 
