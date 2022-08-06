@@ -65,12 +65,12 @@ WSGI_APPLICATION = 'netflix.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': env.str('POSTGRES_ENGINE'),
         'NAME': env.str('POSTGRES_DB'),
         'USER': env.str('POSTGRES_USER'),
         'PASSWORD': env.str('POSTGRES_PASSWORD'),
         'HOST': env.str('POSTGRES_HOST'),
-        'PORT': 6223,
+        'PORT': env.int('POSTGRES_PORT'),
     }
 }
 
