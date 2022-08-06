@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      - POSTGRES_ENGINE=django.db.backends.postgresql
+      - POSTGRES_DB=railway
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=As55XdjdamTh7JstslO8
+      - POSTGRES_HOST=containers-us-west-87.railway.app
+      - POSTGRES_PORT=7553
+    ports:
+      - 8000:8000
+
+  db:
+    image: postgres:12.11
+    environment:
+      - POSTGRES_DB=railway
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=As55XdjdamTh7JstslO8
+    ports:
+      - 5420:7553
+    volumes:
+      - ./data/db/:/var/lib/postgresql/data

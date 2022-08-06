@@ -1,0 +1,29 @@
+name: Mysite CI
+
+
+on: [push]
+
+jobs:
+  check-unit-tests:
+    runs-on: ubuntu-latest
+    env:
+      DJANGO_SETTINGS_MODULEL: netflix.settings
+      DEBUG: ${{ secrets.DEBUG }}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+      POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+      POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+      POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+      POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install Requirements
+        run: pip3 install -r requirements.txt
+      - name: Run Tests
+        run: python3 manage.py test
+
+
