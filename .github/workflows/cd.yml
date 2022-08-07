@@ -27,7 +27,7 @@ jobs:
           POSTGRES_PORT: ${{ env.POSTGRES_PORT }}
         run: python manage.py test
 
-    deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: check-unit-tests
     steps:
