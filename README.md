@@ -11,7 +11,7 @@ Live website - https://netflix.mysite-live.uz/ <hr><br>
 *  - virtualenv env
 *  - env\Scripts\activate
 * 3 - cd into project "Netflix"
-* 4 - set your .env file with using .env_example
+* 4 - set your .env file with using .env_examples
 * 5 - pip install -r requirements.txt
 * 6 - python manage.py runserver
 
