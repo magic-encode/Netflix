@@ -4,7 +4,7 @@ from django.db import models
 
 class Actor(models.Model):
     name = models.CharField(max_length=150)
-    birthdate = models.DateTimeField(blank=False)
+    birthdate = models.DateField(blank=False)
     gender = models.BooleanField(null=True)
 
 
