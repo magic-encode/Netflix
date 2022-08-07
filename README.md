@@ -1,7 +1,7 @@
 # Netflix API Root | Simple Django-Rest-Framework 
 Sourcode and Resources for My Site <br>
 Live website - https://netflix.mysite-live.uz/ <hr><br>
-<img src="./docs/spotify.png">
+<img src="./docs/N.png">
 <hr>
 
 # Installation
