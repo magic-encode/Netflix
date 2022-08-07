@@ -14,9 +14,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunSQL('CREATE EXTENSION pg_trgm'),
-
-        migrations.CreateModel(
+          migrations.CreateModel(
             name='Actor',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
