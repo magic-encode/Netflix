@@ -40,6 +40,7 @@ jobs:
           username: root
           key: ${{ secrets.KEY }}
           script: |
+            cd Netflix
             git pull
             systemctl restart gunicorn.service
       
