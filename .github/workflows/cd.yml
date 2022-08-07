@@ -1,9 +1,7 @@
 name: Spotify CD
 
 
-on: 
-  push:
-    branches: [master]
+on: [push]
 
 jobs:
   test:
