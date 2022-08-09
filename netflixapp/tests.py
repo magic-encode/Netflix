@@ -1,6 +1,8 @@
-from django.test import TestCase, Client
-
 from .models import Movie
+
+
+from django.test import Client
+from django.test import TestCase
 
 
 class TestMovieViewSet(TestCase):
