@@ -1,4 +1,4 @@
-Django==3.2.15
+Django==3.2.16
 djangorestframework==3.13.1
 docker==5.0.3
 docker-compose==1.29.2
