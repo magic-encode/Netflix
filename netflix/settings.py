@@ -18,7 +18,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['netflix.3003.uz', '164.92.184.239', 'localhost']
+ALLOWED_HOSTS = ['netflix.3003.uz', '144.126.211.8', 'localhost', '0.0.0.0:']
 
 
 INSTALLED_APPS = [
