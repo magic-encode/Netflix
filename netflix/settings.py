@@ -16,9 +16,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env.str("SECRET_KEY")
 
 
-DEBUG = False
+DEBUG = True 
 
-ALLOWED_HOSTS = ['netflix.3003.uz', '144.126.211.8', 'localhost', '0.0.0.0:']
+ALLOWED_HOSTS = ['netflix.3003.uz', '144.126.211.8', 'localhost', '0.0.0.0', '127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -28,12 +28,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'netflixapp',
-
+    
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
+
+    'netflixapp',
+
 
 ]
 

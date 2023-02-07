@@ -104,23 +104,9 @@ class CommentAPIView(APIView):
         serializer.save()
         return Response(data=serializer.data)
 
-    
-
-
     # def perform_create(self, serializer):
     #     serializer.validated_data['user'] = self.request.user
     #     serializer.save()
-
-
-
-
-
-
-
-
-
-
-
 
 
 # def get(self, request, format=None):
